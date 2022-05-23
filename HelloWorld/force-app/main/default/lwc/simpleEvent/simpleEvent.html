@@ -1,0 +1,7 @@
+<template>
+    <c-peginator onnext={handleNx} onprevious={handlePre}></c-peginator>
+
+    <template if:true={page}>
+        Current page Number: {page}
+    </template>
+</template>

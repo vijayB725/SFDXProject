@@ -1,0 +1,6 @@
+<aura:component>
+     <aura:attribute name="NameField" type="String" />
+     <lightning:input value="{!v.NameField}" placeholder="Enter name" aura:id="inputName"/>
+     <lightning:button label="Save" onclick="{!c.performSave}" />
+     {!v.NameField}
+</aura:component>	

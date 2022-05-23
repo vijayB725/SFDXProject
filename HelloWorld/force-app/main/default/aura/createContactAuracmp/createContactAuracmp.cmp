@@ -1,0 +1,39 @@
+<aura:component controller="CreateContactController">
+    <aura:attribute name="message" type="String" />
+    <aura:attribute name="newContact" type="Contact" default="{
+        'SobjectType' : 'Contact', 
+        'Title'     : '', 
+        'FirstName' : '', 
+        'LastName'  : '',
+        'Email'     : '', 
+        'Description' : ''    
+}"/>
+    <aura:attribute name="salutationOptions" type="list" default="[
+       {'label':'Mr.' , value: 'Mr.'},
+       {'label':'Ms.' , value: 'Ms.'},
+       {'label':'Mrs.' , value: 'Mrs.'}
+       
+    ]"/>
+    <lightning:card iconName="standard:contact" title="add a Contact">
+        <lightning:layout>
+            <lightning:layoutItem size="5" padding="around-small">
+                <lightning:inputName aura:id="contactName"
+                    label="contact Name"
+                    firstName="{!v.newContact.FirstName}"
+                    lastName="{!v.newContact.LastName}"
+                    salutation="{!v.newContact.Title}"
+                    options="{!v.salutationOptions}"
+                    required="true"    
+                />
+            </lightning:layoutItem>
+
+            <lightning:layoutItem size="6" padding="around-small" >
+                <lightning:input aura:id="inputEmail" value="{!v.newContact.Email}" label="Email" type="email"/>
+                <lightning:textarea value="{!v.newContact.Description}" label="Description" />
+                <lightning:button label="Save Contact" onclick="{!c.saveContact}" variant="brand" class="slds-var-m-around_small" />
+            </lightning:layoutItem>
+        </lightning:layout>
+        {!v.message}
+    </lightning:card>
+
+</aura:component>	

@@ -1,0 +1,13 @@
+<aura:component>
+    <aura:attribute name="searchTerm" type="String" />
+    <lightning:layout>
+        <lightning:layoutItem>
+            <input type="text" placeholder="Enter search term here"  aura:id="searchBox" />
+        </lightning:layoutItem>
+        <lightning:layoutItem>
+            <lightning:button label="Search" onclick="{!c.getInputText}" />
+            you have entered : {!v.searchTerm}
+        </lightning:layoutItem>
+        
+    </lightning:layout>
+</aura:component>	

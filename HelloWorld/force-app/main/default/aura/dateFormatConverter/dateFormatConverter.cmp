@@ -1,0 +1,15 @@
+<aura:component>
+    <aura:attribute name="inputDateTime" type="DateTime" />
+    <aura:attribute name="outputDateTime" type="DateTime" />
+    <lightning:layout>
+        <lightning:layoutItem size = "6">
+            <lightning:input type="DateTime" aura:id="inputDt" value="{!v.inputDateTime}" />
+            <lightning:select aura:id="select" label="Select format" onchange="{!c.changeFormat}" name="select" >
+                <option value=""> Choose one of below</option>
+                <option value="yyyy MM dd">yyyy MM dd </option>
+                <option value="yyyy-mm-dd, hh:mm:ss a">yyyy-mm-dd, hhhf:mm:ss a</option>
+            </lightning:select>
+        </lightning:layoutItem>
+    </lightning:layout>
+    Output Date: {!v.outputDateTime}
+</aura:component>	

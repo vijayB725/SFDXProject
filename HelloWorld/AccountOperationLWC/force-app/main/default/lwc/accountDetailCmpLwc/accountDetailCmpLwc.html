@@ -1,0 +1,42 @@
+<!-- sldsValidatorIgnore -->
+<template >
+    <lightning-card title="ContactList" icon-name="custom:custom9" >
+        <lightning-layout>
+            <lightning-layout-item>
+                
+                <div onkeyup={handleKeyUp} class="slds-p-around_medium">
+                    <lightning-input
+                        name="enter-search"
+                        label="Search when user hits the 'enter' key"
+                        type="search"
+                    ></lightning-input>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <!-- Button group: simple buttons -->
+            <lightning-button-group>
+                <lightning-button label="New" onclick={HandleNewAccount}></lightning-button>
+                <lightning-button label="Delete"></lightning-button>
+                <lightning-button label="Export"></lightning-button>
+            </lightning-button-group>
+        </div>
+        <!---------for each------------------------------------------------ -->
+        <template for:each={acounts} for:item="acc">
+            <li key={acc.Id}>
+                {acc.Name}
+            </li>
+        </template>
+
+        <!--lightning-layout>
+            <lightning-layout-item>
+                <lightning-datatable 
+                    data={accounts} 
+                    columns={columns} 
+                    key-field="Id"
+                    onrowaction={handleRowAction} >
+                </lightning-datatable>
+            </lightning-layout-item>
+        </lightning-layout -->
+    </lightning-card >
+</template>

@@ -1,0 +1,30 @@
+<template>
+
+    <lightning-card title="Contact List" icon-name="standard:contact">
+        
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <lightning-input label="find Contact" onchange={handleChange}>
+                </lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout multiple-rows="true">  
+        <template if:true={contacts.data}>      
+            <template for:each={contacts.data} for:item="contact"> 
+                <div key={contact.Id}>
+                    <lightning-layout-item padding="around-small" size="10">
+                        <!--lightning-formatted-text value={contact.Name}></lightning-formatted-text-->
+                        <c-contact-name contact1={contact} onselect={handleSelectRec}></c-contact-name>
+                        <!--lightning-formatted-email value={contact.Email}></lightning-formatted-email>
+                        <lightning-formatted-phone value={contact.Phone}></lightning-formatted-phone-->
+                    </lightning-layout-item>
+                </div> 
+            </template>
+        </template>
+        <template if:true={contacts.error}>
+            {contact.error}
+        </template>
+        
+        </lightning-layout>
+    </lightning-card>
+</template>

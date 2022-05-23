@@ -1,0 +1,4 @@
+<aura:component>
+    <p> I am frmo LWC</p>
+    <c:accountListWeb />
+</aura:component>	

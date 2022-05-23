@@ -1,0 +1,19 @@
+<aura:component >
+  
+
+    <!-- list type attribute -->
+    <aura:attribute name="numbers" type="list" />
+    <lightning:button label="Get Values" onclick="{!c.getNumbers}" />
+    <aura:iteration var="n" items="{!v.numbers}">
+        {!n.value}
+    </aura:iteration>
+
+    <!-- Map type Atribute      -->
+    <aura:attribute name="myMap" type="Map" /> 
+    <lightning:button label="get map" onclick="{!c.getMap}">
+    <aura:iteration var="m" items="{!v.myMap}" indexVar="key">
+       {!m.value}
+    </aura:iteration>
+    </lightning:button>
+
+</aura:component>	
