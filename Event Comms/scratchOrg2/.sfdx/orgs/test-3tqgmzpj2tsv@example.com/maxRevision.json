@@ -1,0 +1,41 @@
+{
+  "serverMaxRevisionCounter": 6,
+  "sourceMembers": {
+    "CustomField__Account.Account_Rating__c": {
+      "serverRevisionCounter": 1,
+      "lastRetrievedFromServer": null,
+      "memberType": "CustomField",
+      "isNameObsolete": false
+    },
+    "Profile__Admin": {
+      "serverRevisionCounter": 6,
+      "lastRetrievedFromServer": null,
+      "memberType": "Profile",
+      "isNameObsolete": false
+    },
+    "Layout__Account-Account (Marketing) Layout": {
+      "serverRevisionCounter": 2,
+      "lastRetrievedFromServer": null,
+      "memberType": "Layout",
+      "isNameObsolete": false
+    },
+    "Layout__Account-Account (Sales) Layout": {
+      "serverRevisionCounter": 3,
+      "lastRetrievedFromServer": null,
+      "memberType": "Layout",
+      "isNameObsolete": false
+    },
+    "Layout__Account-Account (Support) Layout": {
+      "serverRevisionCounter": 4,
+      "lastRetrievedFromServer": null,
+      "memberType": "Layout",
+      "isNameObsolete": false
+    },
+    "Layout__Account-Account Layout": {
+      "serverRevisionCounter": 5,
+      "lastRetrievedFromServer": null,
+      "memberType": "Layout",
+      "isNameObsolete": false
+    }
+  }
+}
